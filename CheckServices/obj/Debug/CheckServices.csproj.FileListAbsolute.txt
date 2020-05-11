@@ -1,0 +1,13 @@
+E:\ProjetosCSharp\CheckServices\CheckServices\bin\Debug\CheckServices.exe.config
+E:\ProjetosCSharp\CheckServices\CheckServices\bin\Debug\CheckServices.exe
+E:\ProjetosCSharp\CheckServices\CheckServices\bin\Debug\CheckServices.pdb
+E:\ProjetosCSharp\CheckServices\CheckServices\obj\Debug\CheckServices.csproj.CoreCompileInputs.cache
+E:\ProjetosCSharp\CheckServices\CheckServices\obj\Debug\CheckServices.exe
+E:\ProjetosCSharp\CheckServices\CheckServices\obj\Debug\CheckServices.pdb
+E:\ProjetosCSharp\CheckServices\CheckServices\bin\Debug\log4net.dll
+E:\ProjetosCSharp\CheckServices\CheckServices\bin\Debug\log4net.xml
+E:\ProjetosCSharp\CheckServices\CheckServices\obj\Debug\CheckServices.csproj.CopyComplete
+E:\ProjetosCSharp\CheckServices\CheckServices\obj\Debug\CheckServices.ProjectInstaller.resources
+E:\ProjetosCSharp\CheckServices\CheckServices\obj\Debug\CheckServices.Service1.resources
+E:\ProjetosCSharp\CheckServices\CheckServices\obj\Debug\CheckServices.csproj.GenerateResource.cache
+E:\ProjetosCSharp\CheckServices\CheckServices\obj\Debug\CheckServices.Properties.Resources.resources

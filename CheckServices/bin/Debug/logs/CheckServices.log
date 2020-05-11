@@ -1,0 +1,19 @@
+2020-05-11 02:04:39,592 [5] INFO  CheckServices.Service1 - Starting service
+2020-05-11 02:12:23,852 [6] INFO  CheckServices.Service1 - Check services stopping
+2020-05-11 02:14:01,608 [6] INFO  CheckServices.Service1 - Check services stopping
+2020-05-11 02:15:07,073 [5] INFO  CheckServices.Service1 - Starting service
+2020-05-11 02:16:57,535 [6] INFO  CheckServices.Service1 - Check services stopping
+2020-05-11 02:19:54,408 [6] INFO  CheckServices.Service1 - Check services stopping
+2020-05-11 02:21:15,194 [6] INFO  CheckServices.Service1 - Check services stopping
+2020-05-11 02:24:06,555 [6] INFO  CheckServices.Service1 - Check services stopping
+2020-05-11 03:33:38,181 [9] INFO  CheckServices.Service1 - Check services stopping
+2020-05-11 03:34:27,947 [5] INFO  CheckServices.Service1 - Starting service
+2020-05-11 03:34:27,977 [5] INFO  CheckServices.Service1 - List of service: 2
+2020-05-11 03:34:27,978 [5] DEBUG CheckServices.Service1 - Starting Thread _CheckServices
+2020-05-11 03:34:27,981 [_CheckServices] INFO  CheckServices.Service1 - List of services stopped: 
+Service: vpnagent;Status:Stopped;AutoStart:True
+2020-05-11 03:34:27,981 [_CheckServices] DEBUG CheckServices.Service1 - Auto start is disabled
+2020-05-11 03:34:27,982 [_CheckServices] INFO  CheckServices.Service1 - List of services stopped(updated): 
+Service: vpnagent;Status:Stopped;AutoStart:True
+2020-05-11 03:34:27,982 [_CheckServices] DEBUG CheckServices.Service1 - Email Not enable
+2020-05-11 03:35:28,459 [6] INFO  CheckServices.Service1 - The aplication is stopping
