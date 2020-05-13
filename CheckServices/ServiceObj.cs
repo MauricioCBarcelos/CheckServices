@@ -9,40 +9,6 @@ namespace CheckServices
 
         public bool AutoStart { get; set; }
 
-
-        public string statusInString
-        {
-            get
-            {
-                switch (Service.Status)
-                {
-                    case ServiceControllerStatus.ContinuePending:
-                        return "ContinuePending";
-
-                    case ServiceControllerStatus.Paused:
-                        return "Paused";
-
-                    case ServiceControllerStatus.PausePending:
-                        return "PausePending";
-
-                    case ServiceControllerStatus.Running:
-                        return "Running";
-
-                    case ServiceControllerStatus.StartPending:
-                        return "StartPending";
-
-                    case ServiceControllerStatus.Stopped:
-                        return "Stopped";
-
-                    case ServiceControllerStatus.StopPending:
-                        return "StopPending";
-
-                }
-
-                return "";
-            }
-        }
-
         public ServiceObj(string serviceName, bool autoStart)
         {
             Service = new ServiceController(serviceName);

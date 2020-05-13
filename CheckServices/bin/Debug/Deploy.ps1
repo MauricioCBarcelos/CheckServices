@@ -2,8 +2,10 @@
 try {
 
     if (Get-Service -Name CheckServices) {
-    
-        cmd /c sc delete "CheckServices"
+		
+		Stop-Process -Name 'CheckServices'
+		
+        cmd /c sc delete "CheckServices" 
         
     }
 

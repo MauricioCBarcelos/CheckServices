@@ -7,7 +7,20 @@ namespace CheckServices.config
     {
         public static CustomConfigsGroup getConfig() => (CustomConfigsGroup)ConfigurationManager.GetSection("CustomConfig");
 
-        public int ThreadInterval => Convert.ToInt32(ConfigurationManager.AppSettings["threadInterval"].ToString());
+        public int[] ThreadInterval
+        {
+            get
+            {
+                int[] times = new int[3];
+
+                for (int i = 0; i < times.Length; i++)
+                {
+                    times[i] = Convert.ToInt32(ConfigurationManager.AppSettings["threadInterval"].ToString().Split(':')[i]);
+                }
+
+                return times;
+            }
+        }
 
         public bool DisableAutoStart => Convert.ToBoolean(ConfigurationManager.AppSettings["DisableAutoStart"].ToString());
 

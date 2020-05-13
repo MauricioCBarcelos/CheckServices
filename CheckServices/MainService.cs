@@ -53,7 +53,7 @@ namespace CheckServices
                         Name = "_CheckServices"
                     };
 
-                    log.Debug("Starting Thread " + threadsCheckServices.Name);
+                    log.Info("Starting Thread " + threadsCheckServices.Name);
                     threadsCheckServices.Start();
 
                 }
@@ -73,7 +73,10 @@ namespace CheckServices
 
         private void checkServices()
         {
-            while (true)
+
+            TimeSpan interval = new TimeSpan(sConfig.ThreadInterval[0], sConfig.ThreadInterval[1], sConfig.ThreadInterval[2]);
+
+            for (; ; )
             {
                 List<ServiceObj> servicesStoppedList = new List<ServiceObj>();
 
@@ -81,7 +84,9 @@ namespace CheckServices
                 {
                     try
                     {
-                        if (!servicesList[i].statusInString.Equals("Running"))
+                        servicesList[i].Service.Refresh();
+
+                        if (!servicesList[i].Service.Status.Equals(ServiceControllerStatus.Running))
                         {
                             servicesStoppedList.Add(servicesList[i]);
                         }
@@ -194,9 +199,13 @@ namespace CheckServices
                     }
 
                 }
+                else
+                {
+                    log.Info("There are no stopped services");
 
-                servicesStoppedList.Clear();
-                Thread.Sleep((sConfig.ThreadInterval * 60000));
+                }
+
+                Thread.Sleep(interval);
             }
         }
 
@@ -207,7 +216,7 @@ namespace CheckServices
             {
                 listServicesLog += "\n";
                 listServicesLog += "Service: " + servicesStoppedList[i].Service.ServiceName + ";";
-                listServicesLog += "Status:" + servicesStoppedList[i].statusInString + ";";
+                listServicesLog += "Status:" + servicesStoppedList[i].Service.Status + ";";
                 listServicesLog += "AutoStart:" + servicesStoppedList[i].AutoStart + ";";
             }
             listServicesLog = listServicesLog.Substring(0, listServicesLog.Length - 1);
@@ -222,7 +231,7 @@ namespace CheckServices
                 listServicesLog += "\n";
                 listServicesLog += "\n<tr>";
                 listServicesLog += "\n<th class=\"ServicesTable\">" + servicesStoppedList[i].Service.ServiceName + "</th>";
-                listServicesLog += "\n<th class=\"ServicesTable\">" + servicesStoppedList[i].statusInString + "</th>";
+                listServicesLog += "\n<th class=\"ServicesTable\">" + servicesStoppedList[i].Service.Status + "</th>";
                 listServicesLog += "\n<th class=\"ServicesTable\">" + servicesStoppedList[i].AutoStart + "</th>";
                 listServicesLog += "\n</tr>";
             }
